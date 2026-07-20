@@ -17,7 +17,7 @@ class Operateur extends BaseController
     {
         $model = new PrefixeModel();
 
-        return view('operateur/prefixes', [
+        return view('admin/prefixes', [
             'prefixes' => $model->orderBy('id', 'DESC')->findAll(),
         ]);
     }
@@ -61,7 +61,7 @@ class Operateur extends BaseController
         $tranches = new TrancheFraisModel();
         $types    = new TypeOperationModel();
 
-        return view('operateur/operations', [
+        return view('admin/operations', [
             'tranches' => $tranches->getTranchesAvecType(),
             'types'    => $types->where('code !=', 'depot')->findAll(),
         ]);
@@ -95,7 +95,7 @@ class Operateur extends BaseController
     {
         $transactions = new TransactionModel();
 
-        return view('operateur/gains', [
+        return view('admin/gains', [
             'gains'     => $transactions->getGains(),
             'gainTotal' => $transactions->getGainTotal(),
         ]);
@@ -108,7 +108,7 @@ class Operateur extends BaseController
     {
         $comptes = new CompteModel();
 
-        return view('operateur/clients', [
+        return view('admin/clients', [
             'comptes' => $comptes->getSituationComptes(),
         ]);
     }
