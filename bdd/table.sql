@@ -12,7 +12,8 @@ CREATE TABLE comptes (
 
 CREATE TABLE types_operation (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    code        VARCHAR(20) NOT NULL UNIQUE 
+    code        VARCHAR(20) NOT NULL UNIQUE,
+    libelle     VARCHAR(50) NOT NULL
 );
 
 
@@ -41,8 +42,8 @@ CREATE TABLE transactions (
 );
 
 
-insert into types_operation (code) values 
-('depot'),('retrait'),('transfert');
+insert into types_operation (code, libelle) values 
+('depot', 'Dépôt'), ('retrait', 'Retrait'), ('transfert', 'Transfert');
 
 insert into tranches_frais (type_operation_id, montant_min, montant_max, frais) values
     ((select id from types_operation where code = 'retrait'), 100, 1000, 50),
