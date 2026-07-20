@@ -77,7 +77,6 @@ class Operateur extends BaseController
             'montant_max'       => $this->request->getPost('montant_max'),
             'frais'             => $this->request->getPost('frais'),
             'pourcentage_autre_operateur' => $this->request->getPost('pourcentage_autre_operateur') ?? 0,
-            'actif'             => 1,
         ];
 
         if (! $model->save($data)) {
