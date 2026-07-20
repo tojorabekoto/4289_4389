@@ -1,6 +1,6 @@
 CREATE TABLE prefixes (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    prefixe     VARCHAR(5)  NOT NULL UNIQUE,   -- ex: '033'
+    prefixe     VARCHAR(5)  NOT NULL UNIQUE
 );
 
 CREATE TABLE comptes (
@@ -12,8 +12,7 @@ CREATE TABLE comptes (
 
 CREATE TABLE types_operation (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    code        VARCHAR(20) NOT NULL UNIQUE   -- 'depot' | 'retrait' | 'transfert'
-    -- libelle     VARCHAR(50) NOT NULL
+    code        VARCHAR(20) NOT NULL UNIQUE 
 );
 
 
@@ -76,6 +75,28 @@ insert into tranches_frais (type_operation_id, montant_min, montant_max, frais) 
     ((select id from types_operation where code = 'retrait'), 1000001, 2000000, 3000),
     ((select id from types_operation where code = 'transfert'), 1000001, 2000000, 3000);
 
+DROP VIEW IF EXISTS vue_gains;
+CREATE VIEW vue_gains AS
+SELECT
+    t.code                     AS type_operation,
+    t.libelle                  AS libelle_operation,
+    COUNT(tr.id)                AS nombre_operations,
+    SUM(tr.frais)               AS total_gain
+FROM transactions tr
+JOIN types_operation t ON t.id = tr.type_operation_id
+WHERE t.code IN ('retrait', 'transfert')
+GROUP BY t.code, t.libelle;
 
+DROP VIEW IF EXISTS vue_comptes_clients;
+CREATE VIEW vue_comptes_clients AS
+SELECT
+    c.id,
+    c.numero_telephone,
+    c.solde,
+    c.date_creation,
+    COUNT(tr.id) AS nombre_transactions
+FROM comptes c
+LEFT JOIN transactions tr ON tr.compte_id = c.id
+GROUP BY c.id, c.numero_telephone, c.solde, c.date_creation;
 
 
