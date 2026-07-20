@@ -19,6 +19,7 @@ $routes->post('operateur/prefixes/ajouter',    'Operateur::ajouterPrefixe');
 $routes->get('operateur/prefixes/basculer/(:num)', 'Operateur::basculerPrefixe/$1');
 
 $routes->get('operateur/operations',           'Operateur::operations');
+$routes->get('operateur/operation',            'Operateur::operations');
 $routes->post('operateur/operations/ajouter',  'Operateur::ajouterTranche');
 
 $routes->get('operateur/gains',                'Operateur::gains');
