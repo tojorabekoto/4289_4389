@@ -4,158 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MoraMoney &middot; Back-office opérateur</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-<style>
-  :root{
-    --navy:#16213E;
-    --navy-soft:#1F2E52;
-    --teal:#0FA37F;
-    --teal-soft:#E4F6F1;
-    --amber:#E8890C;
-    --amber-soft:#FCEFDA;
-    --bg:#F5F6F9;
-    --ink:#1B1F2A;
-    --ink-mute:#6B7280;
-    --line:#E6E8EE;
-    --radius:14px;
-  }
-  *{box-sizing:border-box;}
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Inter',system-ui,sans-serif;
-    font-feature-settings:"tnum" 1;
-  }
-  h1,h2,h3,h4,.brand,.section-title{ font-family:'Space Grotesk',sans-serif; }
-  .num{ font-variant-numeric: tabular-nums; }
-
-  .sidebar{
-    width:260px; min-height:100vh; background:var(--navy); color:#fff;
-    position:fixed; top:0; left:0; bottom:0; padding:28px 18px;
-    display:flex; flex-direction:column; gap:6px;
-  }
-  .brand{
-    display:flex; align-items:center; gap:10px; font-weight:700; font-size:1.15rem;
-    color:#fff; text-decoration:none; margin-bottom:8px; padding:0 8px;
-  }
-  .brand-mark{
-    width:34px;height:34px;border-radius:9px;
-    background:linear-gradient(135deg,var(--teal),#0C8064);
-    display:flex;align-items:center;justify-content:center;
-    font-weight:700; font-size:.95rem; color:#fff; flex-shrink:0;
-  }
-  .brand-tag{
-    font-size:.7rem; color:#8892B0; font-weight:500; padding:0 8px 18px;
-    letter-spacing:.03em; border-bottom:1px solid rgba(255,255,255,.08); margin-bottom:10px;
-  }
-  .side-link{
-    display:flex; align-items:center; gap:12px; padding:11px 12px; border-radius:10px;
-    color:#B7BFDA; text-decoration:none; font-size:.92rem; font-weight:500;
-    transition:.15s ease; border:1px solid transparent;
-  }
-  .side-link i{ font-size:1.05rem; width:20px; text-align:center; }
-  .side-link:hover{ background:rgba(255,255,255,.06); color:#fff; }
-  .side-link.active{
-    background:var(--navy-soft); color:#fff; border-color:rgba(15,163,127,.4);
-    box-shadow:inset 3px 0 0 var(--teal);
-  }
-  .side-foot{
-    margin-top:auto; padding:14px 12px; font-size:.72rem; color:#6B7592;
-    border-top:1px solid rgba(255,255,255,.08);
-  }
-
-  .main{ margin-left:260px; padding:34px 40px 60px; }
-  .topbar{
-    display:flex; justify-content:space-between; align-items:flex-start;
-    margin-bottom:28px; flex-wrap:wrap; gap:16px;
-  }
-  .eyebrow{
-    font-size:.72rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--teal); margin-bottom:6px;
-  }
-  .page-title{ font-size:1.6rem; font-weight:700; margin:0; }
-  .page-sub{ color:var(--ink-mute); font-size:.9rem; margin-top:4px; }
-
-  .panel{
-    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
-    padding:24px; margin-bottom:24px;
-  }
-  .panel-head{
-    display:flex; justify-content:space-between; align-items:center;
-    margin-bottom:18px; flex-wrap:wrap; gap:10px;
-  }
-  .panel-title{ font-size:1.05rem; font-weight:700; margin:0; }
-  .panel-desc{ color:var(--ink-mute); font-size:.83rem; margin:2px 0 0; }
-
-  .btn-teal{
-    background:var(--teal); border-color:var(--teal); color:#fff; font-weight:600;
-    font-size:.85rem; padding:8px 16px; border-radius:9px;
-  }
-  .btn-teal:hover{ background:#0C8064; border-color:#0C8064; color:#fff; }
-  .btn-outline-navy{
-    border-color:var(--line); color:var(--navy); font-weight:600; font-size:.85rem;
-    border-radius:9px; background:#fff;
-  }
-  .btn-outline-navy:hover{ background:var(--bg); color:var(--navy); }
-
-  table.mm{ width:100%; font-size:.87rem; }
-  table.mm thead th{
-    font-size:.7rem; text-transform:uppercase; letter-spacing:.05em;
-    color:var(--ink-mute); font-weight:700; border-bottom:1px solid var(--line);
-    padding-bottom:10px;
-  }
-  table.mm tbody td{ padding:12px 8px; border-bottom:1px solid var(--line); vertical-align:middle; }
-  table.mm tbody tr:last-child td{ border-bottom:none; }
-
-  .pill{
-    display:inline-flex; align-items:center; gap:5px; padding:4px 10px;
-    border-radius:999px; font-size:.74rem; font-weight:600;
-  }
-  .pill-on{ background:var(--teal-soft); color:#0C8064; }
-  .pill-off{ background:#F1F2F5; color:#8B93A7; }
-  .pill-amber{ background:var(--amber-soft); color:#A8620A; }
-
-  .amount{ font-family:'Space Grotesk',sans-serif; font-weight:600; }
-  .money-badge{
-    background:var(--bg); border:1px solid var(--line); border-radius:8px;
-    padding:5px 10px; font-size:.82rem; font-weight:600; font-family:'Space Grotesk',sans-serif;
-  }
-
-  .stat-card{
-    background:var(--navy); color:#fff; border-radius:var(--radius);
-    padding:22px 24px; position:relative; overflow:hidden;
-  }
-  .stat-card.alt{ background:#fff; color:var(--ink); border:1px solid var(--line); }
-  .stat-label{ font-size:.75rem; color:#9AA4C4; text-transform:uppercase; letter-spacing:.05em; font-weight:600; }
-  .stat-card.alt .stat-label{ color:var(--ink-mute); }
-  .stat-value{ font-family:'Space Grotesk',sans-serif; font-size:1.9rem; font-weight:700; margin-top:6px; }
-  .stat-delta{ font-size:.78rem; color:var(--teal); margin-top:6px; font-weight:600; }
-
-  .type-chip{
-    display:inline-flex; align-items:center; gap:8px; padding:6px 12px 6px 8px;
-    border-radius:10px; font-weight:600; font-size:.85rem; border:1px solid var(--line);
-  }
-  .type-chip .dot{ width:9px;height:9px;border-radius:50%; }
-  .dot-depot{ background:#3B82F6; }
-  .dot-retrait{ background:var(--amber); }
-  .dot-transfert{ background:var(--teal); }
-
-  .form-label{ font-size:.8rem; font-weight:600; color:var(--ink); }
-  .form-control, .form-select{ border-radius:9px; border-color:var(--line); font-size:.88rem; }
-  .form-control:focus, .form-select:focus{
-    border-color:var(--teal); box-shadow:0 0 0 3px var(--teal-soft);
-  }
-
-  @media (max-width: 900px){
-    .sidebar{ position:relative; width:100%; min-height:auto; flex-direction:row; overflow-x:auto; padding:14px; }
-    .brand-tag, .side-foot{ display:none; }
-    .side-link span{ display:none; }
-    .main{ margin-left:0; padding:24px 18px 50px; }
-  }
-</style>
+<link href="<?= base_url('Assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+<link rel="stylesheet" href="<?= base_url('Assets/vendor/bootstrap/icons/bootstrap-icons.min.css') ?>">
+<link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 <body>
 
@@ -207,6 +58,6 @@
 
 <?= $this->renderSection('modals') ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url('Assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 </body>
 </html>
