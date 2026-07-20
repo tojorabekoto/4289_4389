@@ -38,6 +38,7 @@ CREATE TABLE transactions (
     montant                 DECIMAL(12,2) NOT NULL,
     frais                   DECIMAL(12,2) NOT NULL DEFAULT 0,
     solde_apres             DECIMAL(12,2) NOT NULL,
+    transfert_type          VARCHAR(20),
     date_transaction        DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (compte_id)              REFERENCES comptes(id),
     FOREIGN KEY (compte_destinataire_id) REFERENCES comptes(id),
@@ -82,14 +83,32 @@ insert into tranches_frais (type_operation_id, montant_min, montant_max, frais, 
 DROP VIEW IF EXISTS vue_gains;
 CREATE VIEW vue_gains AS
 SELECT
-    t.code                     AS type_operation,
-    t.libelle                  AS libelle_operation,
+    CASE
+        WHEN t.code = 'transfert' AND tr.transfert_type = 'interne' THEN 'transfert_interne'
+        WHEN t.code = 'transfert' AND tr.transfert_type = 'externe' THEN 'transfert_externe'
+        ELSE t.code
+    END AS type_operation,
+    CASE
+        WHEN t.code = 'transfert' AND tr.transfert_type = 'interne' THEN 'Transfert interne'
+        WHEN t.code = 'transfert' AND tr.transfert_type = 'externe' THEN 'Transfert entre opérateurs'
+        ELSE t.libelle
+    END AS libelle_operation,
     COUNT(tr.id)                AS nombre_operations,
     SUM(tr.frais)               AS total_gain
 FROM transactions tr
 JOIN types_operation t ON t.id = tr.type_operation_id
 WHERE t.code IN ('retrait', 'transfert')
-GROUP BY t.code, t.libelle;
+GROUP BY
+    CASE
+        WHEN t.code = 'transfert' AND tr.transfert_type = 'interne' THEN 'transfert_interne'
+        WHEN t.code = 'transfert' AND tr.transfert_type = 'externe' THEN 'transfert_externe'
+        ELSE t.code
+    END,
+    CASE
+        WHEN t.code = 'transfert' AND tr.transfert_type = 'interne' THEN 'Transfert interne'
+        WHEN t.code = 'transfert' AND tr.transfert_type = 'externe' THEN 'Transfert entre opérateurs'
+        ELSE t.libelle
+    END;
 
 DROP VIEW IF EXISTS vue_comptes_clients;
 CREATE VIEW vue_comptes_clients AS

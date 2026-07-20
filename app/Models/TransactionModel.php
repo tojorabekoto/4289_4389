@@ -20,6 +20,7 @@ class TransactionModel extends Model
         'frais',
         'solde_avant',
         'solde_apres',
+        'transfert_type',
         'statut',
     ];
 

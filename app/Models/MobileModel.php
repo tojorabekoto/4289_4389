@@ -62,6 +62,8 @@ class MobileModel extends Model
 
         $newSourceSolde = (float) $sourceCompte['solde'];
         $totalFrais = (float) $fraisConfig['frais'];
+        $transferType = null;
+        $destinationCompte = null;
 
         if ($typeOperation === 'transfert'
             && ! empty($numeroTelephoneDestinataire)
@@ -101,6 +103,10 @@ class MobileModel extends Model
                 return false;
             }
 
+            $transferType = $prefixeModel->estUnAutreOperateur($numeroTelephone, $numeroTelephoneDestinataire)
+                ? 'externe'
+                : 'interne';
+
             $newDestinationSolde = (float) $destinationCompte['solde'] + $montant;
             $newSourceSolde -= $montant + $totalFrais;
 
@@ -115,6 +121,21 @@ class MobileModel extends Model
             $db->transRollback();
             return false;
         }
+
+        $transactionData = [
+            'compte_id' => $sourceCompte['id'],
+            'compte_destinataire_id' => $destinationCompte['id'] ?? null,
+            'type_operation_id' => (int) $typeOperationData['id'],
+            'montant' => $montant,
+            'frais' => $totalFrais,
+            'solde_apres' => $newSourceSolde,
+        ];
+
+        if ($transferType !== null) {
+            $transactionData['transfert_type'] = $transferType;
+        }
+
+        $db->table('transactions')->insert($transactionData);
 
         $db->transComplete();
 

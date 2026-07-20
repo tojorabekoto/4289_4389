@@ -23,7 +23,7 @@
       <?php foreach ($gains as $g): ?>
         <div class="col-md-4">
           <div class="stat-card alt">
-            <div class="stat-label">Frais <?= esc(strtolower($g['libelle_operation'] ?? $g['type_operation'])) ?>s</div>
+            <div class="stat-label">Frais <?= esc(strtolower($g['libelle_operation'] ?? $g['type_operation'])) ?></div>
             <div class="stat-value num">Ar <?= number_format((float) $g['total_gain'], 0, ',', ' ') ?></div>
             <div class="text-muted small mt-1 num"><?= (int) $g['nombre_operations'] ?> opérations</div>
           </div>
@@ -43,11 +43,12 @@
         <?php foreach ($gains as $g):
           $part = $gainTotal > 0 ? round(((float) $g['total_gain'] / $gainTotal) * 100) : 0;
           $type = $g['code'] ?? $g['type_operation'];
+          $typeKey = strpos($type, 'transfert') === 0 ? 'transfert' : $type;
         ?>
           <tr>
             <td>
               <span class="type-chip">
-                <span class="dot dot-<?= esc($type) ?>"></span><?= esc($g['libelle_operation'] ?? ucfirst($type)) ?>
+                <span class="dot dot-<?= esc($typeKey) ?>"></span><?= esc($g['libelle_operation'] ?? ucfirst(str_replace('_', ' ', $type))) ?>
               </span>
             </td>
             <td class="num"><?= (int) $g['nombre_operations'] ?></td>
