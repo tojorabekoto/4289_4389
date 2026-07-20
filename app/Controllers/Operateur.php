@@ -10,67 +10,11 @@ use App\Models\TransactionModel;
 
 class Operateur extends BaseController
 {
-    private const ADMIN_USERNAME = 'admin';
-    private const ADMIN_PASSWORD = 'Admin@123';
-
-    private function ensureAdmin()
-    {
-        $session = service('session');
-
-        if (! $session->get('is_admin')) {
-            return redirect()->to('/admin/login');
-        }
-
-        return null;
-    }
-
-    public function login()
-    {
-        $session = service('session');
-
-        if ($session->get('is_admin')) {
-            return redirect()->to('/operateur/prefixes');
-        }
-
-        return view('admin/login');
-    }
-
-    public function loginPost()
-    {
-        $username = $this->request->getPost('username');
-        $password = $this->request->getPost('password');
-        $session = service('session');
-
-        if ($username === self::ADMIN_USERNAME && $password === self::ADMIN_PASSWORD) {
-            $session->set([
-                'is_admin'   => true,
-                'admin_user' => self::ADMIN_USERNAME,
-            ]);
-
-            return redirect()->to('/operateur/prefixes');
-        }
-
-        return redirect()->to('/admin/login')
-                         ->with('error', 'Identifiants invalides.');
-    }
-
-    public function logout()
-    {
-        $session = service('session');
-        $session->remove(['is_admin', 'admin_user']);
-
-        return redirect()->to('/admin/login')->with('success', 'Déconnecté.');
-    }
-
     // ------------------------------------------------------------
     // 1. PREFIXES
     // ------------------------------------------------------------
     public function prefixes()
     {
-        if ($redirect = $this->ensureAdmin()) {
-            return $redirect;
-        }
-
         $model = new PrefixeModel();
 
         return view('admin/prefixes', [
@@ -80,10 +24,6 @@ class Operateur extends BaseController
 
     public function ajouterPrefixe()
     {
-        if ($redirect = $this->ensureAdmin()) {
-            return $redirect;
-        }
-
         $model = new PrefixeModel();
 
         $data = [
@@ -103,10 +43,6 @@ class Operateur extends BaseController
 
     public function basculerPrefixe($id)
     {
-        if ($redirect = $this->ensureAdmin()) {
-            return $redirect;
-        }
-
         $model   = new PrefixeModel();
         $prefixe = $model->find($id);
 
@@ -122,10 +58,6 @@ class Operateur extends BaseController
     // ------------------------------------------------------------
     public function operations()
     {
-        if ($redirect = $this->ensureAdmin()) {
-            return $redirect;
-        }
-
         $tranches = new TrancheFraisModel();
         $types    = new TypeOperationModel();
 
@@ -137,10 +69,6 @@ class Operateur extends BaseController
 
     public function ajouterTranche()
     {
-        if ($redirect = $this->ensureAdmin()) {
-            return $redirect;
-        }
-
         $model = new TrancheFraisModel();
 
         $data = [
@@ -165,10 +93,6 @@ class Operateur extends BaseController
     // ------------------------------------------------------------
     public function gains()
     {
-        if ($redirect = $this->ensureAdmin()) {
-            return $redirect;
-        }
-
         $transactions = new TransactionModel();
 
         return view('admin/gains', [
@@ -182,10 +106,6 @@ class Operateur extends BaseController
     // ------------------------------------------------------------
     public function clients()
     {
-        if ($redirect = $this->ensureAdmin()) {
-            return $redirect;
-        }
-
         $comptes = new CompteModel();
 
         return view('admin/clients', [

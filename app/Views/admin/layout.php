@@ -32,11 +32,6 @@
      href="<?= site_url('operateur/clients') ?>">
      <i class="bi bi-people"></i><span>Comptes clients</span>
   </a>
-
-  <div class="side-foot">
-    Connecté en tant qu'<strong style="color:#C8CEE6"><?= esc(session()->get('admin_user') ?? 'admin') ?></strong><br>
-    <a href="<?= site_url('admin/logout') ?>" class="text-decoration-none">Déconnexion</a>
-  </div>
 </nav>
 
 <div class="main">
