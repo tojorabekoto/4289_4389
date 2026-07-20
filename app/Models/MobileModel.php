@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\PrefixeModel;
+use App\Models\TrancheFraisModel;
+use App\Models\TypeOperationModel;
 use CodeIgniter\Model;
 
 class MobileModel extends Model
@@ -31,6 +34,20 @@ class MobileModel extends Model
         $montant = (float) $data['montant'];
         $numeroTelephoneDestinataire = $data['numero_telephone_destinataire'] ?? null;
 
+        $typeOperationModel = new TypeOperationModel();
+        $trancheFraisModel = new TrancheFraisModel();
+        $prefixeModel = new PrefixeModel();
+
+        $typeOperationData = $typeOperationModel->getParCode($typeOperation);
+        if (! $typeOperationData) {
+            return false;
+        }
+
+        $fraisConfig = ['frais' => 0.0, 'pourcentage_autre_operateur' => 0.0];
+        if (in_array($typeOperation, ['retrait', 'transfert'], true)) {
+            $fraisConfig = $trancheFraisModel->getFraisApplicable((int) $typeOperationData['id'], $montant);
+        }
+
         $db->transStart();
 
         $sourceCompte = $db->table('comptes')
@@ -44,6 +61,14 @@ class MobileModel extends Model
         }
 
         $newSourceSolde = (float) $sourceCompte['solde'];
+        $totalFrais = (float) $fraisConfig['frais'];
+
+        if ($typeOperation === 'transfert'
+            && ! empty($numeroTelephoneDestinataire)
+            && $prefixeModel->estUnAutreOperateur($numeroTelephone, $numeroTelephoneDestinataire)
+        ) {
+            $totalFrais += $montant * ((float) $fraisConfig['pourcentage_autre_operateur'] / 100.0);
+        }
 
         if ($typeOperation === 'depot') {
             $newSourceSolde += $montant;
@@ -51,17 +76,17 @@ class MobileModel extends Model
                 ->where('numero_telephone', $numeroTelephone)
                 ->update(['solde' => $newSourceSolde]);
         } elseif ($typeOperation === 'retrait') {
-            if ($newSourceSolde < $montant) {
+            if ($newSourceSolde < $montant + $totalFrais) {
                 $db->transRollback();
                 return false;
             }
 
-            $newSourceSolde -= $montant;
+            $newSourceSolde -= $montant + $totalFrais;
             $db->table('comptes')
                 ->where('numero_telephone', $numeroTelephone)
                 ->update(['solde' => $newSourceSolde]);
         } elseif ($typeOperation === 'transfert') {
-            if ($newSourceSolde < $montant || empty($numeroTelephoneDestinataire)) {
+            if ($newSourceSolde < $montant + $totalFrais || empty($numeroTelephoneDestinataire)) {
                 $db->transRollback();
                 return false;
             }
@@ -77,7 +102,7 @@ class MobileModel extends Model
             }
 
             $newDestinationSolde = (float) $destinationCompte['solde'] + $montant;
-            $newSourceSolde -= $montant;
+            $newSourceSolde -= $montant + $totalFrais;
 
             $db->table('comptes')
                 ->where('numero_telephone', $numeroTelephone)

@@ -29,15 +29,31 @@ class PrefixeModel extends Model
      */
     public function estPrefixeValide(string $numeroTelephone): bool
     {
-        // $prefixesActifs = $this->where('actif', 1)->findAll();
+        return $this->getPrefixePourNumeroTelephone($numeroTelephone) !== null;
+    }
 
-        // foreach ($prefixesActifs as $p) {
-        //     if (strpos($numeroTelephone, $p['prefixe']) === 0) {
-        //         return true;
-        //     }
-        // }
-        
+    public function getPrefixePourNumeroTelephone(string $numeroTelephone): ?string
+    {
+        $prefixesActifs = $this->where('actif', 1)
+                               ->orderBy('LENGTH(prefixe)', 'DESC')
+                               ->findAll();
 
-        return true;
+        foreach ($prefixesActifs as $prefixe) {
+            if (strpos($numeroTelephone, $prefixe['prefixe']) === 0) {
+                return $prefixe['prefixe'];
+            }
+        }
+
+        return null;
+    }
+
+    public function estUnAutreOperateur(string $numeroTelephoneSource, string $numeroTelephoneDestinataire): bool
+    {
+        $prefixeSource = $this->getPrefixePourNumeroTelephone($numeroTelephoneSource);
+        $prefixeDestinataire = $this->getPrefixePourNumeroTelephone($numeroTelephoneDestinataire);
+
+        return $prefixeSource !== null
+            && $prefixeDestinataire !== null
+            && $prefixeSource !== $prefixeDestinataire;
     }
 }

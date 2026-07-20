@@ -15,7 +15,8 @@ class TrancheFraisModel extends Model
         'type_operation_id',
         'montant_min',
         'montant_max',
-        'frais'
+        'frais',
+        'pourcentage_autre_operateur',
     ];
 
     protected $validationRules = [
@@ -23,6 +24,7 @@ class TrancheFraisModel extends Model
         'montant_min'       => 'required|numeric',
         'montant_max'       => 'required|numeric',
         'frais'             => 'required|numeric',
+        'pourcentage_autre_operateur' => 'permit_empty|numeric',
     ];
 
     /**
@@ -42,13 +44,25 @@ class TrancheFraisModel extends Model
      * Trouve le frais applicable pour un montant donné et un type d'opération.
      * Utilisé côté client au moment de faire un retrait/transfert.
      */
-    public function getFraisApplicable(int $typeOperationId, float $montant): float
+    public function getFraisApplicable(int $typeOperationId, float $montant): array
     {
         $tranche = $this->where('type_operation_id', $typeOperationId)
                          ->where('montant_min <=', $montant)
                          ->where('montant_max >=', $montant)
                          ->first();
 
-        return $tranche ? (float) $tranche['frais'] : 0.0;
+        if (! $tranche) {
+            return [
+                'frais' => 0.0,
+                'pourcentage_autre_operateur' => 0.0,
+            ];
+        }
+
+        return [
+            'frais' => (float) $tranche['frais'],
+            'pourcentage_autre_operateur' => isset($tranche['pourcentage_autre_operateur'])
+                ? (float) $tranche['pourcentage_autre_operateur']
+                : 0.0,
+        ];
     }
 }

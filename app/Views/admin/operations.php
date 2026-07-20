@@ -29,9 +29,12 @@
 
     <table class="mm">
       <thead>
-        <tr><th>Opération</th><th>Tranche de montant (Ar)</th><th>Frais (Ar)</th>
-        <!-- <th>Statut</th> -->
-      </tr>
+        <tr>
+          <th>Opération</th>
+          <th>Tranche de montant (Ar)</th>
+          <th>Frais (Ar)</th>
+          <th>Commission autre opérateur (%)</th>
+        </tr>
       </thead>
       <tbody>
         <?php if (empty($tranches)): ?>
@@ -50,7 +53,9 @@
               <?= number_format((float) $t['montant_max'], 0, ',', ' ') ?>
             </td>
             <td class="num money-badge"><?= number_format((float) $t['frais'], 0, ',', ' ') ?></td>
-      
+            <td class="num text-muted">
+              <?= number_format((float) ($t['pourcentage_autre_operateur'] ?? 0), 2, ',', ' ') ?> %
+            </td>
           </tr>
         <?php endforeach; ?>
       </tbody>
@@ -93,6 +98,11 @@
             <div class="mb-3">
               <label class="form-label">Frais appliqué (Ar)</label>
               <input type="number" name="frais" class="form-control" placeholder="0" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Commission autre opérateur (%)</label>
+              <input type="number" name="pourcentage_autre_operateur" class="form-control" placeholder="0" step="0.01" min="0">
+              <div class="form-text">S’applique uniquement aux transferts vers un numéro d’un autre opérateur.</div>
             </div>
           </div>
           <div class="modal-footer border-0 pt-0">
