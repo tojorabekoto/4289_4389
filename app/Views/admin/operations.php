@@ -29,7 +29,9 @@
 
     <table class="mm">
       <thead>
-        <tr><th>Opération</th><th>Tranche de montant (Ar)</th><th>Frais (Ar)</th><th>Statut</th></tr>
+        <tr><th>Opération</th><th>Tranche de montant (Ar)</th><th>Frais (Ar)</th>
+        <!-- <th>Statut</th> -->
+      </tr>
       </thead>
       <tbody>
         <?php if (empty($tranches)): ?>
@@ -48,13 +50,7 @@
               <?= number_format((float) $t['montant_max'], 0, ',', ' ') ?>
             </td>
             <td class="num money-badge"><?= number_format((float) $t['frais'], 0, ',', ' ') ?></td>
-            <td>
-              <?php if ($t['actif']): ?>
-                <span class="pill pill-on">Actif</span>
-              <?php else: ?>
-                <span class="pill pill-off">Désactivé</span>
-              <?php endif; ?>
-            </td>
+      
           </tr>
         <?php endforeach; ?>
       </tbody>

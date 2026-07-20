@@ -11,7 +11,7 @@ class TypeOperationModel extends Model
     protected $returnType    = 'array';
     protected $useTimestamps = false;
 
-    protected $allowedFields = ['code', 'libelle', 'genere_frais', 'actif'];
+    protected $allowedFields = ['code', 'libelle', 'genere_frais'];
 
     public function getParCode(string $code): ?array
     {

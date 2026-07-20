@@ -29,14 +29,15 @@ class PrefixeModel extends Model
      */
     public function estPrefixeValide(string $numeroTelephone): bool
     {
-        $prefixesActifs = $this->where('actif', 1)->findAll();
+        // $prefixesActifs = $this->where('actif', 1)->findAll();
 
-        foreach ($prefixesActifs as $p) {
-            if (strpos($numeroTelephone, $p['prefixe']) === 0) {
-                return true;
-            }
-        }
+        // foreach ($prefixesActifs as $p) {
+        //     if (strpos($numeroTelephone, $p['prefixe']) === 0) {
+        //         return true;
+        //     }
+        // }
+        
 
-        return false;
+        return true;
     }
 }

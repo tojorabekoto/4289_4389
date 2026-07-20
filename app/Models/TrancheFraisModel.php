@@ -15,8 +15,7 @@ class TrancheFraisModel extends Model
         'type_operation_id',
         'montant_min',
         'montant_max',
-        'frais',
-        'actif',
+        'frais'
     ];
 
     protected $validationRules = [
@@ -48,7 +47,6 @@ class TrancheFraisModel extends Model
         $tranche = $this->where('type_operation_id', $typeOperationId)
                          ->where('montant_min <=', $montant)
                          ->where('montant_max >=', $montant)
-                         ->where('actif', 1)
                          ->first();
 
         return $tranche ? (float) $tranche['frais'] : 0.0;
