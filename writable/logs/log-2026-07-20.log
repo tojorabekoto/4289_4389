@@ -1,0 +1,366 @@
+CRITICAL - 2026-07-20 07:43:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Accueil.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Accueil.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Accueil', [], true)
+ 3 APPPATH/Controllers/MobileController.php(16): view('Accueil')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/lundi/public/index.php')
+CRITICAL - 2026-07-20 07:44:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Accueil.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Accueil.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Accueil', [], true)
+ 3 APPPATH/Controllers/MobileController.php(16): view('Accueil')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/lundi/public/index.php')
+CRITICAL - 2026-07-20 07:44:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Accueil.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Accueil.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Accueil', [], true)
+ 3 APPPATH/Controllers/MobileController.php(16): view('Accueil')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/lundi/public/index.php')
+CRITICAL - 2026-07-20 07:44:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Accueil.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Accueil.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Accueil', [], true)
+ 3 APPPATH/Controllers/MobileController.php(16): view('Accueil')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/lundi/public/index.php')
+CRITICAL - 2026-07-20 07:44:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Accueil.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Accueil.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Accueil', [], true)
+ 3 APPPATH/Controllers/MobileController.php(16): view('Accueil')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/lundi/public/index.php')
+CRITICAL - 2026-07-20 07:44:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Accueil.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Accueil.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Accueil', [], true)
+ 3 APPPATH/Controllers/MobileController.php(16): view('Accueil')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/lundi/public/index.php')
+CRITICAL - 2026-07-20 07:44:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Accueil.php"
+[Method: GET, Route: /]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Accueil.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Accueil', [], true)
+ 3 APPPATH/Controllers/MobileController.php(16): view('Accueil')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->index()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/lundi/public/index.php')
+CRITICAL - 2026-07-20 09:30:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "client/add_compte.php"
+[Method: POST, Route: client/add]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('client/add_compte.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('client/add_compte', [], true)
+ 3 APPPATH/Controllers/MobileController.php(33): view('client/add_compte')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+ERROR - 2026-07-20 09:57:58 --> UNIQUE constraint failed: comptes.numero_telephone
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`numero_telephone`) VALUES (:numero_telephone:)', [...], false)
+ 5 APPPATH/Models/MobileModel.php(13): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Controllers/MobileController.php(29): App\Models\MobileModel->add_compte([...])
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 09:57:58 --> CodeIgniter\Database\Exceptions\DatabaseException: UNIQUE constraint failed: comptes.numero_telephone
+[Method: POST, Route: client/add]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`numero_telephone`) VALUES (:numero_telephone:)', [...], false)
+ 2 APPPATH/Models/MobileModel.php(13): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH/Controllers/MobileController.php(29): App\Models\MobileModel->add_compte([...])
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 09:57:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: UNIQUE constraint failed: comptes.numero_telephone
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`numero_telephone`) VALUES (:numero_telephone:)', [...], false)
+ 4 APPPATH/Models/MobileModel.php(13): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH/Controllers/MobileController.php(29): App\Models\MobileModel->add_compte([...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 09:57:58 --> [Caused by] Exception: UNIQUE constraint failed: comptes.numero_telephone
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`numero_telephone`) VALUES (:numero_telephone:)', [...], false)
+ 5 APPPATH/Models/MobileModel.php(13): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Controllers/MobileController.php(29): App\Models\MobileModel->add_compte([...])
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+ERROR - 2026-07-20 09:58:01 --> UNIQUE constraint failed: comptes.numero_telephone
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`numero_telephone`) VALUES (:numero_telephone:)', [...], false)
+ 5 APPPATH/Models/MobileModel.php(13): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Controllers/MobileController.php(29): App\Models\MobileModel->add_compte([...])
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 09:58:01 --> CodeIgniter\Database\Exceptions\DatabaseException: UNIQUE constraint failed: comptes.numero_telephone
+[Method: POST, Route: client/add]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`numero_telephone`) VALUES (:numero_telephone:)', [...], false)
+ 2 APPPATH/Models/MobileModel.php(13): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH/Controllers/MobileController.php(29): App\Models\MobileModel->add_compte([...])
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 09:58:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: UNIQUE constraint failed: comptes.numero_telephone
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`numero_telephone`) VALUES (:numero_telephone:)', [...], false)
+ 4 APPPATH/Models/MobileModel.php(13): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH/Controllers/MobileController.php(29): App\Models\MobileModel->add_compte([...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 09:58:01 --> [Caused by] Exception: UNIQUE constraint failed: comptes.numero_telephone
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 163.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(163): SQLite3->exec('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comptes` (`numero_telephone`) VALUES (\'0333333333\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comptes` (`numero_telephone`) VALUES (:numero_telephone:)', [...], false)
+ 5 APPPATH/Models/MobileModel.php(13): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH/Controllers/MobileController.php(29): App\Models\MobileModel->add_compte([...])
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 10:05:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "client/page.php"
+[Method: GET, Route: client]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('client/page.php')
+ 2 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('client/page', [], true)
+ 3 APPPATH/Controllers/MobileController.php(22): view('client/page')
+ 4 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->client()
+ 5 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 10:44:27 --> Error: Class "App\Models\SelecttModel" not found
+[Method: POST, Route: client/add]
+in APPPATH/Controllers/MobileController.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 10:44:55 --> Error: Class "App\Models\SelectModel" not found
+[Method: POST, Route: client/add]
+in APPPATH/Controllers/MobileController.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 10:45:18 --> Error: Class "App\Models\SelectModel" not found
+[Method: POST, Route: client/add]
+in APPPATH/Controllers/MobileController.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 10:51:22 --> Error: Call to undefined function App\Controllers\where()
+[Method: POST, Route: client/add]
+in APPPATH/Controllers/MobileController.php on line 42.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+CRITICAL - 2026-07-20 10:52:41 --> Error: Call to a member function where() on array
+[Method: POST, Route: client/add]
+in APPPATH/Controllers/MobileController.php on line 42.
+ 1 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\MobileController->add_compte()
+ 2 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MobileController))
+ 3 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/4289-4389/public/index.php')
+ERROR - 2026-07-20 11:54:59 --> Unable to prepare statement: 1, no such table: prefixes
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC', [], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Operateur.php(21): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Operateur->prefixes()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operateur))
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/v1-4289-4389 (copie)/public/index.php')
+CRITICAL - 2026-07-20 11:54:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: prefixes
+[Method: GET, Route: operateur/prefixes]
+in SYSTEMPATH/Database/BaseConnection.php on line 865.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC', [], false)
+ 2 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/Operateur.php(21): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Operateur->prefixes()
+ 6 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operateur))
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/v1-4289-4389 (copie)/public/index.php')
+CRITICAL - 2026-07-20 11:54:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: 1, no such table: prefixes
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 174.
+ 1 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC', [], false)
+ 4 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH/Controllers/Operateur.php(21): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Operateur->prefixes()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operateur))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/v1-4289-4389 (copie)/public/index.php')
+CRITICAL - 2026-07-20 11:54:59 --> [Caused by] Exception: Unable to prepare statement: 1, no such table: prefixes
+in SYSTEMPATH/Database/SQLite3/Connection.php on line 164.
+ 1 SYSTEMPATH/Database/SQLite3/Connection.php(164): SQLite3->query('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC')
+ 2 SYSTEMPATH/Database/BaseConnection.php(910): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC')
+ 3 SYSTEMPATH/Database/BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prefixes`
+ORDER BY `id` DESC', [], false)
+ 5 SYSTEMPATH/Model.php(253): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Controllers/Operateur.php(21): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Operateur->prefixes()
+ 9 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Operateur))
+10 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH/rewrite.php(44): require_once('/home/itu/Documents/v1-4289-4389 (copie)/public/index.php')

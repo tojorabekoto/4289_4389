@@ -1,0 +1,204 @@
+CRITICAL - 2026-04-21 08:35:41 --> ErrorException: Array to string conversion
+[Method: GET, Route: Bibliotheque]
+in APPPATH/Controllers/BibliothequeController.php on line 16.
+ 1 APPPATH/Controllers/BibliothequeController.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Controllers/BibliothequeController.php', 16)
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:19:32 --> ErrorException: Undefined variable $produits
+[Method: GET, Route: 4]
+in APPPATH/Controllers/BibliothequeController.php on line 18.
+ 1 APPPATH/Controllers/BibliothequeController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produits', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Controllers/BibliothequeController.php', 18)
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->index('4')
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:19:33 --> ErrorException: Undefined variable $produits
+[Method: GET, Route: /]
+in APPPATH/Controllers/BibliothequeController.php on line 15.
+ 1 APPPATH/Controllers/BibliothequeController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produits', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Controllers/BibliothequeController.php', 15)
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:19:34 --> ErrorException: Undefined variable $produits
+[Method: GET, Route: /]
+in APPPATH/Controllers/BibliothequeController.php on line 15.
+ 1 APPPATH/Controllers/BibliothequeController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produits', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Controllers/BibliothequeController.php', 15)
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:19:34 --> ErrorException: Undefined variable $produits
+[Method: GET, Route: /]
+in APPPATH/Controllers/BibliothequeController.php on line 15.
+ 1 APPPATH/Controllers/BibliothequeController.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $produits', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Controllers/BibliothequeController.php', 15)
+ 2 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->index()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 4 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:34:28 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:34:29 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:34:39 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:34:40 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:34:40 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:35:11 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:35:11 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:35:15 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:35:21 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:35:43 --> ErrorException: Undefined property: stdClass::$disponibilite
+[Method: GET, Route: 1]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$disponibilite', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('1')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-04-21 09:56:26 --> ErrorException: Attempt to read property "status" on null
+[Method: GET, Route: livre/ajouter]
+in APPPATH/Views/Livre.php on line 16.
+ 1 APPPATH/Views/Livre.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "status" on null', '/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php', 16)
+ 2 SYSTEMPATH/View/View.php(240): include('/home/itu/Documents/CodeIgniter/bibliotheque/app/Views/Livre.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1250): CodeIgniter\View\View->render('Livre', [], true)
+ 5 APPPATH/Controllers/BibliothequeController.php(26): view('Livre', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\BibliothequeController->livre('livre', 'ajouter')
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BibliothequeController))
+ 8 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

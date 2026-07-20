@@ -1,0 +1,32 @@
+Système de simulation d'opérateur Mobile Money
+Creation des tables 
+Préfixes valables de l'opérateur (ex: 033, 037)
+Barème de frais par tranche de montant (modifiable)
+Chaque type d'opération a son propre barème
+Comptes clients (login automatique via numéro de téléphone)
+Le dépôt est supposé gratuit (pas de frais) -> aucune ligne dans tranches_frais
+
+COTE OPERATEUR (Pages et Fonctionalités) (4389)
+
+    Configuration des préfixes valable de l’opérateur (form)
+        table Prefixe (id, prefixe)
+        - Fonction : add_prefixe(prefixe)
+    Création de types d'opérations 
+        table types_operation (id, code)
+    Création de barème de frais par tranche de montant
+        table tranches_frais (id, type_operation_id, montant_min, montant_max, frais)
+        - Fonction : add_tranche_frais(type_operation_id, montant_min, montant_max, frais)
+    Chaque type d'opération a son propre barème
+
+
+COTE CLIENT (Pages et Fonctionalités) (4289)
+
+    Login automatique via numéro de téléphone
+        Table Compte (id, numero_telephone, solde, date_creation)
+        - Fonction : add_compte(numero_telephone)
+    Dépôt d'argent (aucun frais)
+        - Fonction : depot(numero_telephone, montant)
+    Retrait d'argent (frais selon barème)
+        - Fonction : retrait(numero_telephone, montant)
+    Transfert d'argent (frais selon barème)
+        - Fonction : transfert(numero_telephone_source, numero_telephone_destination, montant)
