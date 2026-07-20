@@ -34,11 +34,8 @@
   </a>
 
   <div class="side-foot">
-    Connecté en tant qu'<strong style="color:#C8CEE6"><?= esc(session()->get('admin_username')) ?></strong><br>
-    Session opérateur
-    <a href="<?= site_url('admin/logout') ?>" class="btn btn-sm btn-outline-light mt-2" style="font-size: 0.7rem; padding: 4px 8px;">
-      <i class="bi bi-box-arrow-right"></i> Déconnexion
-    </a>
+    Connecté en tant qu'<strong style="color:#C8CEE6"><?= esc(session()->get('admin_user') ?? 'admin') ?></strong><br>
+    <a href="<?= site_url('admin/logout') ?>" class="text-decoration-none">Déconnexion</a>
   </div>
 </nav>
 

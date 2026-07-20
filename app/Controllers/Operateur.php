@@ -10,12 +10,56 @@ use App\Models\TransactionModel;
 
 class Operateur extends BaseController
 {
-    protected function checkAuth()
+    private const ADMIN_USERNAME = 'admin';
+    private const ADMIN_PASSWORD = 'Admin@123';
+
+    private function ensureAdmin()
     {
-        if (! session()->get('admin_logged_in')) {
+        $session = service('session');
+
+        if (! $session->get('is_admin')) {
             return redirect()->to('/admin/login');
         }
-        return true;
+
+        return null;
+    }
+
+    public function login()
+    {
+        $session = service('session');
+
+        if ($session->get('is_admin')) {
+            return redirect()->to('/operateur/prefixes');
+        }
+
+        return view('admin/login');
+    }
+
+    public function loginPost()
+    {
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+        $session = service('session');
+
+        if ($username === self::ADMIN_USERNAME && $password === self::ADMIN_PASSWORD) {
+            $session->set([
+                'is_admin'   => true,
+                'admin_user' => self::ADMIN_USERNAME,
+            ]);
+
+            return redirect()->to('/operateur/prefixes');
+        }
+
+        return redirect()->to('/admin/login')
+                         ->with('error', 'Identifiants invalides.');
+    }
+
+    public function logout()
+    {
+        $session = service('session');
+        $session->remove(['is_admin', 'admin_user']);
+
+        return redirect()->to('/admin/login')->with('success', 'Déconnecté.');
     }
 
     // ------------------------------------------------------------
@@ -23,8 +67,8 @@ class Operateur extends BaseController
     // ------------------------------------------------------------
     public function prefixes()
     {
-        if ($this->checkAuth() !== true) {
-            return $this->checkAuth();
+        if ($redirect = $this->ensureAdmin()) {
+            return $redirect;
         }
 
         $model = new PrefixeModel();
@@ -36,8 +80,8 @@ class Operateur extends BaseController
 
     public function ajouterPrefixe()
     {
-        if ($this->checkAuth() !== true) {
-            return $this->checkAuth();
+        if ($redirect = $this->ensureAdmin()) {
+            return $redirect;
         }
 
         $model = new PrefixeModel();
@@ -59,8 +103,8 @@ class Operateur extends BaseController
 
     public function basculerPrefixe($id)
     {
-        if ($this->checkAuth() !== true) {
-            return $this->checkAuth();
+        if ($redirect = $this->ensureAdmin()) {
+            return $redirect;
         }
 
         $model   = new PrefixeModel();
@@ -74,14 +118,14 @@ class Operateur extends BaseController
     }
 
     // ------------------------------------------------------------
-    // 2if ($this->checkAuth() !== true) {
-            return $this->checkAuth();
-        }
-
-        . TYPES D'OPERATION + BAREME DE FRAIS
+    // 2. TYPES D'OPERATION + BAREME DE FRAIS
     // ------------------------------------------------------------
     public function operations()
     {
+        if ($redirect = $this->ensureAdmin()) {
+            return $redirect;
+        }
+
         $tranches = new TrancheFraisModel();
         $types    = new TypeOperationModel();
 
@@ -89,14 +133,14 @@ class Operateur extends BaseController
             'tranches' => $tranches->getTranchesAvecType(),
             'types'    => $types->where('code !=', 'depot')->findAll(),
         ]);
-    }if ($this->checkAuth() !== true) {
-            return $this->checkAuth();
-        }
-
-        
+    }
 
     public function ajouterTranche()
     {
+        if ($redirect = $this->ensureAdmin()) {
+            return $redirect;
+        }
+
         $model = new TrancheFraisModel();
 
         $data = [
@@ -113,10 +157,6 @@ class Operateur extends BaseController
         }
 
         return redirect()->to('/operateur/operations')
-        if ($this->checkAuth() !== true) {
-            return $this->checkAuth();
-        }
-
                           ->with('success', 'Tranche de frais ajoutée avec succès.');
     }
 
@@ -125,15 +165,15 @@ class Operateur extends BaseController
     // ------------------------------------------------------------
     public function gains()
     {
+        if ($redirect = $this->ensureAdmin()) {
+            return $redirect;
+        }
+
         $transactions = new TransactionModel();
 
         return view('admin/gains', [
             'gains'     => $transactions->getGains(),
             'gainTotal' => $transactions->getGainTotal(),
-        if ($this->checkAuth() !== true) {
-            return $this->checkAuth();
-        }
-
         ]);
     }
 
@@ -142,6 +182,10 @@ class Operateur extends BaseController
     // ------------------------------------------------------------
     public function clients()
     {
+        if ($redirect = $this->ensureAdmin()) {
+            return $redirect;
+        }
+
         $comptes = new CompteModel();
 
         return view('admin/clients', [

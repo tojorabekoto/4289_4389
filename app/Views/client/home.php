@@ -1,7 +1,5 @@
 <body class="bg-light">
-<link rel="stylesheet" href="<?= base_url('Assets/vendor/bootstrap/css/bootstrap.min.css') ?>">
-<link rel="stylesheet" href="<?= base_url('Assets/vendor/bootstrap/icons/bootstrap-icons.min.css') ?>">
-<link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+<link rel="stylesheet" href="/Assets/vendor/bootstrap/css/bootstrap.min.css">
 
 <div class="container py-5">
 
