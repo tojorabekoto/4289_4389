@@ -33,7 +33,13 @@
      <i class="bi bi-people"></i><span>Comptes clients</span>
   </a>
 
-  <div class="side-foot">Connecté en tant qu'<strong style="color:#C8CEE6">admin</strong><br>Session opérateur</div>
+  <div class="side-foot">
+    Connecté en tant qu'<strong style="color:#C8CEE6"><?= esc(session()->get('admin_username')) ?></strong><br>
+    Session opérateur
+    <a href="<?= site_url('admin/logout') ?>" class="btn btn-sm btn-outline-light mt-2" style="font-size: 0.7rem; padding: 4px 8px;">
+      <i class="bi bi-box-arrow-right"></i> Déconnexion
+    </a>
+  </div>
 </nav>
 
 <div class="main">

@@ -13,6 +13,12 @@ $routes->post('/client/add', 'MobileController::add_compte');
 $routes->get('/client/operation', 'MobileController::operation');
 $routes->post('/client/operation', 'MobileController::operation');
 
+// Routes authentification admin
+$routes->get('admin/login', 'Auth::login');
+$routes->post('admin/login', 'Auth::login');
+$routes->get('admin/logout', 'Auth::logout');
+
+// Routes admin protégées
 $routes->get('admin', 'Operateur::prefixes');
 $routes->get('operateur/prefixes',            'Operateur::prefixes');
 $routes->post('operateur/prefixes/ajouter',    'Operateur::ajouterPrefixe');
