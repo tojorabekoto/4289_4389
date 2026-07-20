@@ -17,7 +17,14 @@ COTE OPERATEUR (Pages et Fonctionalités) (4389)
         table tranches_frais (id, type_operation_id, montant_min, montant_max, frais)
         - Fonction : add_tranche_frais(type_operation_id, montant_min, montant_max, frais)
     Chaque type d'opération a son propre barème
+    
+    Configuration des préfixes : associer chaque préfixe (032, 033, 034...) à un opérateur.
 
+    Commission supplémentaire : ajouter un pourcentage configurable pour les transferts vers un autre opérateur.
+
+    Situation des gains : distinguer les gains des transferts internes et ceux des transferts entre opérateurs.
+
+    Situation des montants à envoyer : générer un rapport des montants à envoyer à chaque opérateur afin de faciliter les  opérations de règlement ou d'approvisionnement.
 
 COTE CLIENT (Pages et Fonctionalités) (4289)
 
