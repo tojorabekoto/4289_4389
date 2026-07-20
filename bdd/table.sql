@@ -26,6 +26,22 @@ CREATE TABLE tranches_frais (
     FOREIGN KEY (type_operation_id) REFERENCES types_operation(id)
 );
 
+DROP TABLE IF EXISTS transactions;
+CREATE TABLE transactions (
+    id                      INTEGER PRIMARY KEY AUTOINCREMENT,
+    compte_id               INTEGER NOT NULL,
+    compte_destinataire_id  INTEGER,
+    type_operation_id       INTEGER NOT NULL,
+    montant                 DECIMAL(12,2) NOT NULL,
+    frais                   DECIMAL(12,2) NOT NULL DEFAULT 0,
+    solde_apres             DECIMAL(12,2) NOT NULL,
+    date_transaction        DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (compte_id)              REFERENCES comptes(id),
+    FOREIGN KEY (compte_destinataire_id) REFERENCES comptes(id),
+    FOREIGN KEY (type_operation_id)      REFERENCES types_operation(id)
+);
+
+
 insert into types_operation (code) values 
 ('depot'),('retrait'),('transfert');
 

@@ -13,6 +13,7 @@ $routes->post('/client/add', 'MobileController::add_compte');
 $routes->get('/client/operation', 'MobileController::operation');
 $routes->post('/client/operation', 'MobileController::operation');
 
+$routes->get('/admin', 'Operateur::prefixes');
 $routes->get('operateur/prefixes',            'Operateur::prefixes');
 $routes->post('operateur/prefixes/ajouter',    'Operateur::ajouterPrefixe');
 $routes->get('operateur/prefixes/basculer/(:num)', 'Operateur::basculerPrefixe/$1');
