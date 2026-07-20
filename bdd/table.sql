@@ -1,6 +1,8 @@
 CREATE TABLE prefixes (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
-    prefixe     VARCHAR(5)  NOT NULL UNIQUE
+    prefixe     VARCHAR(5)  NOT NULL UNIQUE,
+    description TEXT,
+    actif       INTEGER NOT NULL DEFAULT 1
 );
 
 CREATE TABLE comptes (
