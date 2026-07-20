@@ -1,5 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoraMoney</title>
+  <link href="<?= base_url('Assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+  <link rel="stylesheet" href="<?= base_url('Assets/vendor/bootstrap/icons/bootstrap-icons.min.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+</head>
 <body class="bg-light">
-<link rel="stylesheet" href="/Assets/vendor/bootstrap/css/bootstrap.min.css">
 
 <div class="container py-5">
 
@@ -168,6 +177,5 @@ function toggleTransferRecipientField() {
 typeOperation.addEventListener('change', toggleTransferRecipientField);
 toggleTransferRecipientField();
 </script>
-
-<script src="/Assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
