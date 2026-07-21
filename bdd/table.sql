@@ -1,3 +1,14 @@
+--select--
+
+-- select * from comptes;
+-- select * from prefixes;
+-- select * from types_operation;
+-- select * from tranches_frais;
+-- select * from comptes;
+
+-- delete from comptes where id = 
+-----------
+
 CREATE TABLE prefixes (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
     prefixe     VARCHAR(5)  NOT NULL UNIQUE,
