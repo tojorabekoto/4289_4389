@@ -16,8 +16,8 @@ Login automatique avec le numéro de téléphone
 ●​ pas d’inscription au préalable
 ●​ Opérations
 ●​ voir le solde
-    ●​ faire un dépot ( supposer que c’est automatique)
-    ●​ faire un retrait ( supposer que c’est automatique)
+    ●​ faire un dépot 
+    ●​ faire un retrait 
     ●​ faire un transfert
 
 4389
