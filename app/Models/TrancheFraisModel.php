@@ -17,6 +17,7 @@ class TrancheFraisModel extends Model
         'montant_max',
         'frais',
         'pourcentage_autre_operateur',
+        'pourcentage_meme_operateur',
         'actif',
     ];
 

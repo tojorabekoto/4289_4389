@@ -1,0 +1,19 @@
+promotion en pourcentage vers les meme operateur (miena ny frais)
+
+=======
+DROP TABLE IF EXISTS tranches_frais;
+CREATE TABLE tranches_frais (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    type_operation_id   INTEGER NOT NULL,
+    montant_min         DECIMAL(12,2) NOT NULL,
+    montant_max         DECIMAL(12,2) NOT NULL,
+    frais               DECIMAL(12,2) NOT NULL,
+    pourcentage_autre_operateur DECIMAL(5,2) NOT NULL DEFAULT 0,
+    pourcentage_meme_operateur DECIMAL(5,2) NOT NULL DEFAULT 0,
+    FOREIGN KEY (type_operation_id) REFERENCES types_operation(id)
+);
+
+===========
+insert into tranches_frais (type_operation_id, montant_min, montant_max, frais, pourcentage_autre_operateur, pourcentage_meme_operateur) values
+    ((select id from types_operation where code = 'retrait'), 100, 1000, 50, 20, 50),
+    ((select id from types_operation where code = 'transfert'), 100, 1000, 50, 20, 50);

@@ -34,6 +34,7 @@
           <th>Tranche de montant (Ar)</th>
           <th>Frais (Ar)</th>
           <th>Commission autre opérateur (%)</th>
+          <th>Promotion vers meme opérateur (%)</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -72,6 +73,9 @@
               </td>
               <td>
                 <input type="number" name="pourcentage_autre_operateur" class="form-control form-control-sm" value="<?= esc($t['pourcentage_autre_operateur'] ?? 0) ?>" step="0.01" min="0">
+              </td>
+              <td>
+                <input type="number" name="pourcentage_meme_operateur" class="form-control form-control-sm" value="<?= esc($t['pourcentage_meme_operateur'] ?? 0) ?>" step="0.01" min="0">
               </td>
               <td>
                 <div class="d-flex gap-2">
@@ -127,6 +131,10 @@
               <label class="form-label">Commission autre opérateur (%)</label>
               <input type="number" name="pourcentage_autre_operateur" class="form-control" placeholder="0" step="0.01" min="0">
               <div class="form-text">S’applique uniquement aux transferts vers un numéro d’un autre opérateur.</div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Promotion vers meme opérateur (%)</label>
+              <input type="number" name="pourcentage_meme_operateur" class="form-control" placeholder="0" step="0.01" min="0">
             </div>
           </div>
           <div class="modal-footer border-0 pt-0">

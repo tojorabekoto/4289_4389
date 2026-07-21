@@ -77,6 +77,7 @@ class Operateur extends BaseController
             'montant_max'               => $this->request->getPost('montant_max'),
             'frais'                     => $this->request->getPost('frais'),
             'pourcentage_autre_operateur' => $this->request->getPost('pourcentage_autre_operateur'),
+            'pourcentage_meme_operateur' => $this->request->getPost('pourcentage_meme_operateur'),
         ];
 
         if (! $model->save($data)) {
@@ -98,6 +99,7 @@ class Operateur extends BaseController
             'montant_max'               => $this->request->getPost('montant_max'),
             'frais'                     => $this->request->getPost('frais'),
             'pourcentage_autre_operateur' => $this->request->getPost('pourcentage_autre_operateur'),
+            'pourcentage_meme_operateur' => $this->request->getPost('pourcentage_meme_operateur'),
         ];
 
         if (! $model->update($id, $data)) {
