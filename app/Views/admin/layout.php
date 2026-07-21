@@ -32,6 +32,9 @@
      href="<?= site_url('operateur/clients') ?>">
      <i class="bi bi-people"></i><span>Comptes clients</span>
   </a>
+  <a class="side-link" href="<?= site_url('/') ?>">
+    <i class="bi bi-box-arrow-left"></i><span>Retour au site</span>
+  </a>
 </nav>
 
 <div class="main">

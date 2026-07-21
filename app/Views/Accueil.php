@@ -59,6 +59,7 @@
                     >
                 </div>
                 <button class="btn btn-welcome btn-lg w-100">Créer un compte</button>
+                <a href="/admin" class="">Admin ></a>
             </form>
         </div>
     </div>
