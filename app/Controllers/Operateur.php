@@ -72,10 +72,11 @@ class Operateur extends BaseController
         $model = new TrancheFraisModel();
 
         $data = [
-            'type_operation_id' => $this->request->getPost('type_operation_id'),
-            'montant_min'       => $this->request->getPost('montant_min'),
-            'montant_max'       => $this->request->getPost('montant_max'),
-            'frais'             => $this->request->getPost('frais'),
+            'type_operation_id'         => $this->request->getPost('type_operation_id'),
+            'montant_min'               => $this->request->getPost('montant_min'),
+            'montant_max'               => $this->request->getPost('montant_max'),
+            'frais'                     => $this->request->getPost('frais'),
+            'pourcentage_autre_operateur' => $this->request->getPost('pourcentage_autre_operateur'),
         ];
 
         if (! $model->save($data)) {
@@ -85,6 +86,39 @@ class Operateur extends BaseController
 
         return redirect()->to('/operateur/operations')
                           ->with('success', 'Tranche de frais ajoutée avec succès.');
+    }
+
+    public function modifierTranche($id)
+    {
+        $model = new TrancheFraisModel();
+
+        $data = [
+            'type_operation_id'         => $this->request->getPost('type_operation_id'),
+            'montant_min'               => $this->request->getPost('montant_min'),
+            'montant_max'               => $this->request->getPost('montant_max'),
+            'frais'                     => $this->request->getPost('frais'),
+            'pourcentage_autre_operateur' => $this->request->getPost('pourcentage_autre_operateur'),
+        ];
+
+        if (! $model->update($id, $data)) {
+            return redirect()->to('/operateur/operations')
+                              ->with('errors', $model->errors());
+        }
+
+        return redirect()->to('/operateur/operations')
+                          ->with('success', 'Tranche de frais modifiée avec succès.');
+    }
+
+    public function supprimerTranche($id)
+    {
+        $model = new TrancheFraisModel();
+
+        if ($model->find($id)) {
+            $model->delete($id);
+        }
+
+        return redirect()->to('/operateur/operations')
+                          ->with('success', 'Tranche de frais supprimée avec succès.');
     }
 
     // ------------------------------------------------------------

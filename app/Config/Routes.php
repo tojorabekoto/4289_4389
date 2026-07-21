@@ -21,6 +21,8 @@ $routes->get('operateur/prefixes/basculer/(:num)', 'Operateur::basculerPrefixe/$
 $routes->get('operateur/operations',           'Operateur::operations');
 $routes->get('operateur/operation',            'Operateur::operations');
 $routes->post('operateur/operations/ajouter',  'Operateur::ajouterTranche');
+$routes->post('operateur/operations/modifier/(:num)', 'Operateur::modifierTranche/$1');
+$routes->post('operateur/operations/supprimer/(:num)', 'Operateur::supprimerTranche/$1');
 
 $routes->get('operateur/gains',                'Operateur::gains');
 

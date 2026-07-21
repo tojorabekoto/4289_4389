@@ -9,6 +9,7 @@
 -- delete from comptes where id = 
 -----------
 
+DROP TABLE IF EXISTS prefixes;
 CREATE TABLE prefixes (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
     prefixe     VARCHAR(5)  NOT NULL UNIQUE,
@@ -16,6 +17,7 @@ CREATE TABLE prefixes (
     actif       INTEGER NOT NULL DEFAULT 1
 );
 
+DROP TABLE IF EXISTS comptes;
 CREATE TABLE comptes (
     id                  INTEGER PRIMARY KEY AUTOINCREMENT,
     numero_telephone    VARCHAR(15) NOT NULL UNIQUE,
@@ -23,13 +25,14 @@ CREATE TABLE comptes (
     date_creation       DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+DROP TABLE IF EXISTS types_operation;
 CREATE TABLE types_operation (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
     code        VARCHAR(20) NOT NULL UNIQUE,
     libelle     VARCHAR(50) NOT NULL
 );
 
-
+DROP TABLE IF EXISTS tranches_frais;
 CREATE TABLE tranches_frais (
     id                  INTEGER PRIMARY KEY AUTOINCREMENT,
     type_operation_id   INTEGER NOT NULL,

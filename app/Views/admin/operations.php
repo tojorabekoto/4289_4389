@@ -34,29 +34,53 @@
           <th>Tranche de montant (Ar)</th>
           <th>Frais (Ar)</th>
           <th>Commission autre opérateur (%)</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <?php if (empty($tranches)): ?>
-          <tr><td colspan="4" class="text-center text-muted py-4">Aucune tranche configurée pour le moment.</td></tr>
+          <tr><td colspan="5" class="text-center text-muted py-4">Aucune tranche configurée pour le moment.</td></tr>
         <?php endif; ?>
 
         <?php foreach ($tranches as $t): ?>
-          <tr>
-            <td>
-              <span class="type-chip">
-                <span class="dot dot-<?= esc($t['code']) ?>"></span><?= esc($t['libelle']) ?>
-              </span>
-            </td>
-            <td class="num text-muted">
-              <?= number_format((float) $t['montant_min'], 0, ',', ' ') ?> &ndash;
-              <?= number_format((float) $t['montant_max'], 0, ',', ' ') ?>
-            </td>
-            <td class="num money-badge"><?= number_format((float) $t['frais'], 0, ',', ' ') ?></td>
-            <td class="num text-muted">
-              <?= number_format((float) ($t['pourcentage_autre_operateur'] ?? 0), 2, ',', ' ') ?> %
-            </td>
-          </tr>
+          <form method="post" action="<?= site_url('operateur/operations/modifier/' . $t['id']) ?>">
+            <?= csrf_field() ?>
+            <tr>
+              <td>
+                <select name="type_operation_id" class="form-select form-select-sm" required>
+                  <?php foreach ($types as $type): ?>
+                    <option value="<?= (int) $type['id'] ?>" <?= ((int) $type['id'] === (int) $t['type_operation_id']) ? 'selected' : '' ?>>
+                      <?= esc($type['libelle']) ?>
+                    </option>
+                  <?php endforeach; ?>
+                </select>
+              </td>
+              <td>
+                <div class="row g-2">
+                  <div class="col-6">
+                    <label class="form-label small mb-1">Min</label>
+                    <input type="number" name="montant_min" class="form-control form-control-sm" value="<?= esc($t['montant_min']) ?>" required>
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label small mb-1">Max</label>
+                    <input type="number" name="montant_max" class="form-control form-control-sm" value="<?= esc($t['montant_max']) ?>" required>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <input type="number" name="frais" class="form-control form-control-sm" value="<?= esc($t['frais']) ?>" required>
+              </td>
+              <td>
+                <input type="number" name="pourcentage_autre_operateur" class="form-control form-control-sm" value="<?= esc($t['pourcentage_autre_operateur'] ?? 0) ?>" step="0.01" min="0">
+              </td>
+              <td>
+                <div class="d-flex gap-2">
+                  <button type="submit" class="btn btn-sm btn-teal">Enregistrer</button>
+                  <button type="submit" class="btn btn-sm btn-outline-danger" formaction="<?= site_url('operateur/operations/supprimer/' . $t['id']) ?>" onclick="return confirm('Supprimer cette tranche ?')">Supprimer</button>
+                </div>
+              </td>
+            </tr>
+          </form>
         <?php endforeach; ?>
       </tbody>
     </table>
