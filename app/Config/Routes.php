@@ -28,3 +28,5 @@ $routes->get('operateur/gains',                'Operateur::gains');
 
 $routes->get('operateur/clients',              'Operateur::clients');
 
+$routes->get('adminop', 'Operateur::op');
+

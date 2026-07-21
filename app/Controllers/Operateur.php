@@ -145,4 +145,9 @@ class Operateur extends BaseController
             'comptes' => $comptes->getSituationComptes(),
         ]);
     }
+
+    public function op()
+    {
+        return view('admin/operatorchoose');
+    }
 }

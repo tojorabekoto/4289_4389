@@ -45,22 +45,24 @@
     <div class="welcome-card bg-white">
         <div class="p-5">
             <h1 class="welcome-header text-center mb-3">Bienvenue sur MoraMoney</h1>
-            <p class="text-center welcome-sub mb-4">Créez un compte client rapidement en saisissant votre numéro de téléphone.</p>
+            <p class="text-center welcome-sub mb-4">Admin : choose an operator</p>
 
-            <form method="POST" action="/client/add">
+            <form method="POST" action="<?= site_url('operateur/prefixes') ?>">
+                <?= csrf_field() ?>
                 <div class="mb-4">
-                    <label class="form-label">Numéro de téléphone</label>
-                    <input
-                        type="text"
-                        class="form-control form-control-lg"
-                        name="numero_telephone"
-                        placeholder="Ex. 0341234567"
-                        required
-                    >
+                    <label class="form-label">Choisir un opérateur</label>
+                    <select class="form-select form-select-lg" name="operateur" required>
+                        <option value="" disabled selected>-- Sélectionnez un opérateur --</option>
+                        <option value="Telma">Telma</option>
+                        <option value="Airtel">Airtel</option>
+                        <option value="Orange">Orange</option>
+                    </select>
                 </div>
-                <button class="btn btn-welcome btn-lg w-100">Créer un compte</button>
-                <a href="/adminop" class="">Admin ></a>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-welcome btn-lg">Valider</button>
+                </div>
             </form>
+        
         </div>
     </div>
 </div>
