@@ -76,7 +76,6 @@ class Operateur extends BaseController
             'montant_min'       => $this->request->getPost('montant_min'),
             'montant_max'       => $this->request->getPost('montant_max'),
             'frais'             => $this->request->getPost('frais'),
-            'actif'             => 1,
         ];
 
         if (! $model->save($data)) {
