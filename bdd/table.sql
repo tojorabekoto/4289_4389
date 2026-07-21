@@ -136,4 +136,3 @@ FROM comptes c
 LEFT JOIN transactions tr ON tr.compte_id = c.id
 GROUP BY c.id, c.numero_telephone, c.solde, c.date_creation;
 
-

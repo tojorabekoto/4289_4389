@@ -15,6 +15,7 @@ class CompteModel extends Model
         'numero_telephone',
         'solde',
         'statut',
+        'epargne',
         'derniere_activite',
     ];
 
@@ -30,6 +31,7 @@ class CompteModel extends Model
             $id = $this->insert([
                 'numero_telephone'  => $numeroTelephone,
                 'solde'             => 0,
+                'epargne'           => 0,
                 'statut'            => 'actif',
                 'derniere_activite' => date('Y-m-d H:i:s'),
             ], true);

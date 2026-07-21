@@ -56,6 +56,7 @@ class MobileController extends Controller
     public function operation()
     {
         $numero_telephone = $this->request->getPost('numero_telephone');
+        $epargne =  $this->request->getPost('Epargne');
         $type_operation = $this->request->getPost('type_operation');
         $montant = $this->request->getPost('montant');
         $numero_telephone_destinataire = $this->request->getPost('numero_telephone_destinataire') ?? null;
@@ -63,6 +64,7 @@ class MobileController extends Controller
         $mobileModel = new MobileModel();
         $data = [
             'numero_telephone' => $numero_telephone,
+            'epargne' => $epargne,
             'type_operation' => $type_operation,
             'montant' => $montant,
             'numero_telephone_destinataire' => $numero_telephone_destinataire,

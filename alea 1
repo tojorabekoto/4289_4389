@@ -17,3 +17,49 @@ CREATE TABLE tranches_frais (
 insert into tranches_frais (type_operation_id, montant_min, montant_max, frais, pourcentage_autre_operateur, pourcentage_meme_operateur) values
     ((select id from types_operation where code = 'retrait'), 100, 1000, 50, 20, 50),
     ((select id from types_operation where code = 'transfert'), 100, 1000, 50, 20, 50);
+
+
+Now misy notion epargne , client peu decider quelle pourcentage il veux rehefa misy transfer de misy (epargne)% makany amn epargne 
+
+
+DROP TABLE IF EXISTS comptes;
+CREATE TABLE comptes (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    numero_telephone    VARCHAR(15) NOT NULL UNIQUE,
+    solde               DECIMAL(12,2) NOT NULL DEFAULT 0,
+    date_creation       DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    Epargne             DECIMAL(5,2) NOT NULL DEFAULT 0,
+
+);
+
+DROP TABLE IF EXISTS transactions;
+CREATE TABLE transactions (
+    id                      INTEGER PRIMARY KEY AUTOINCREMENT,
+    compte_id               INTEGER NOT NULL,
+    compte_destinataire_id  INTEGER,
+    type_operation_id       INTEGER NOT NULL,
+    montant                 DECIMAL(12,2) NOT NULL,
+    frais                   DECIMAL(12,2) NOT NULL DEFAULT 0,
+    solde_apres             DECIMAL(12,2) NOT NULL,
+    epargne_compte          INTEGER NOT NULL,
+    transfert_type          VARCHAR(20),
+    date_transaction        DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (epargne_compte)         REFERENCES comptes(Epargne),
+    FOREIGN KEY (compte_id)              REFERENCES comptes(id),
+    FOREIGN KEY (compte_destinataire_id) REFERENCES comptes(id),
+    FOREIGN KEY (type_operation_id)      REFERENCES types_operation(id)
+);
+
+
+DROP VIEW IF EXISTS vue_comptes_clients;
+CREATE VIEW vue_comptes_clients AS
+SELECT
+    c.id,
+    c.numero_telephone,
+    c.solde,
+    c.epargne,
+    c.date_creation,
+    COUNT(tr.id) AS nombre_transactions
+FROM comptes c
+LEFT JOIN transactions tr ON tr.compte_id = c.id
+GROUP BY c.id, c.numero_telephone, c.solde, c.epargne, c.date_creation;

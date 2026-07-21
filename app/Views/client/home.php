@@ -50,6 +50,9 @@
                     <h2 class="fw-bold text-primary mb-4">
                         Welcome <?= esc($data['numero_telephone']) ?>!
                     </h2>
+                    <!-- <h1 class="fw-bold text-primary mb-4">
+                        Epargne <?= esc($data['epargne']) ?>!
+                    </h1> -->
 
                     <div class="bg-light rounded-3 p-3 mb-4">
                         <div class="d-flex justify-content-between">

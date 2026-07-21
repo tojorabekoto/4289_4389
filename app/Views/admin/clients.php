@@ -24,7 +24,7 @@
 
     <table class="mm">
       <thead>
-        <tr><th>Numéro</th><th>Solde actuel</th><th>Nb. transactions</th><th>Statut</th></tr>
+        <tr><th>Numéro</th><th>Solde actuel</th><th>Nb. transactions</th><th>Epargne</th><th>Statut</th></tr>
       </thead>
       <tbody>
         <?php if (empty($comptes)): ?>
@@ -36,6 +36,7 @@
             <td class="amount"><?= esc($c['numero_telephone']) ?></td>
             <td class="num money-badge">Ar <?= number_format((float) $c['solde'], 0, ',', ' ') ?></td>
             <td class="num"><?= (int) $c['nombre_transactions'] ?></td>
+            <td class="num"><?= esc($c['Epargne'])?></td>
             <td>
               <?php if (($c['statut'] ?? 'actif') === 'actif'): ?>
                 <span class="pill pill-on">Actif</span>
